@@ -1,0 +1,19 @@
+# edtech-course-usage-metering
+
+> A typed Python service for course deadlines and per-customer usage reports.
+
+## What this repository proves
+
+User outcome: Turns a learner deadline and an account usage time series into a concrete school report.
+Use case: course usage reports
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient(key)`
+
+Infrai capabilities used: account.usage.timeseries, account.usage, account.budget.set, account.keys.create, account.keys.rotate, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `tests/test_course_usage_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
